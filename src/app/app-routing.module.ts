@@ -5,12 +5,12 @@ import { HelloModule } from './hello/hello.module';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => HelloModule
-  }
+    loadChildren: () => HelloModule,
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule, RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
